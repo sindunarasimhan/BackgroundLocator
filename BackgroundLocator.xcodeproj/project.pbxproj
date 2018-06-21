@@ -12,9 +12,12 @@
 		53C5CBAD20D9BB52001FF026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C5CBAB20D9BB52001FF026 /* Main.storyboard */; };
 		53C5CBAF20D9BB52001FF026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53C5CBAE20D9BB52001FF026 /* Assets.xcassets */; };
 		53C5CBB220D9BB52001FF026 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53C5CBB020D9BB52001FF026 /* LaunchScreen.storyboard */; };
+		C3A1BD01A7859E49E58C9D61 /* Pods_BackgroundLocator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A39738E502CA134709CA1D /* Pods_BackgroundLocator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16CB9F6AFC74C79B1F2A1BE7 /* Pods-BackgroundLocator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundLocator.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundLocator/Pods-BackgroundLocator.release.xcconfig"; sourceTree = "<group>"; };
+		18A39738E502CA134709CA1D /* Pods_BackgroundLocator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BackgroundLocator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C5CBA420D9BB51001FF026 /* BackgroundLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C5CBA720D9BB51001FF026 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53C5CBA920D9BB52001FF026 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		53C5CBAE20D9BB52001FF026 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53C5CBB120D9BB52001FF026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53C5CBB320D9BB52001FF026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		902A2D6F979EEE6DBDBC3EE4 /* Pods-BackgroundLocator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundLocator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundLocator/Pods-BackgroundLocator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A1BD01A7859E49E58C9D61 /* Pods_BackgroundLocator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4041D11F213D906DB98D5E10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				902A2D6F979EEE6DBDBC3EE4 /* Pods-BackgroundLocator.debug.xcconfig */,
+				16CB9F6AFC74C79B1F2A1BE7 /* Pods-BackgroundLocator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		53C5CB9B20D9BB51001FF026 = {
 			isa = PBXGroup;
 			children = (
 				53C5CBA620D9BB51001FF026 /* BackgroundLocator */,
 				53C5CBA520D9BB51001FF026 /* Products */,
+				4041D11F213D906DB98D5E10 /* Pods */,
+				B38A8A2C3382F1E2B4A028C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = BackgroundLocator;
 			sourceTree = "<group>";
 		};
+		B38A8A2C3382F1E2B4A028C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18A39738E502CA134709CA1D /* Pods_BackgroundLocator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53C5CBB620D9BB52001FF026 /* Build configuration list for PBXNativeTarget "BackgroundLocator" */;
 			buildPhases = (
+				30E109656B40B0F1376C1782 /* [CP] Check Pods Manifest.lock */,
 				53C5CBA020D9BB51001FF026 /* Sources */,
 				53C5CBA120D9BB51001FF026 /* Frameworks */,
 				53C5CBA220D9BB51001FF026 /* Resources */,
+				B5F68E5C9919174A1A90C9A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +122,11 @@
 				TargetAttributes = {
 					53C5CBA320D9BB51001FF026 = {
 						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -129,6 +160,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30E109656B40B0F1376C1782 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BackgroundLocator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5F68E5C9919174A1A90C9A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundLocator/Pods-BackgroundLocator-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KSCrash/KSCrash.framework",
+				"${BUILT_PRODUCTS_DIR}/Sentry/Sentry.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KSCrash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sentry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundLocator/Pods-BackgroundLocator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53C5CBA020D9BB51001FF026 /* Sources */ = {
@@ -278,6 +354,7 @@
 		};
 		53C5CBB720D9BB52001FF026 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 902A2D6F979EEE6DBDBC3EE4 /* Pods-BackgroundLocator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +373,7 @@
 		};
 		53C5CBB820D9BB52001FF026 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16CB9F6AFC74C79B1F2A1BE7 /* Pods-BackgroundLocator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
